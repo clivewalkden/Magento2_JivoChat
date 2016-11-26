@@ -43,7 +43,8 @@ class Display extends Template
         if ($this->chatHelper->getEnabled()) {
             $this
                 ->setTemplate('chat/widget.phtml')
-                ->setKey($this->chatHelper->getWidgetId());
+                ->setKey($this->chatHelper->getWidgetId()
+                ->setEnabled($this->chatHelper->getEnabled()));
             return parent::_toHtml();
         }
         return '';
