@@ -18,13 +18,30 @@
 
 namespace Sozo\JivoChat\Helper;
 
-use Magento\Store\Model\ScopeInterface;
+use Magento\Framework\App\Helper\Context;
 use Magento\Framework\App\Helper\AbstractHelper;
+use Magento\Framework\Module\ModuleListInterface;
+use Magento\Store\Model\ScopeInterface;
 
 class Data extends AbstractHelper
 {
     const CFG_JIVOCHAT_ENABLED          = 'sozo_jivochat/chatconfig/enabled';
     const CFG_JIVOCHAT_WIDGET_ID        = 'sozo_jivochat/widgetconfig/widget_id';
+
+    /**
+     * @var ModuleListInterface
+     */
+    protected $_moduleList;
+
+    public function __construct(
+        Context $context,
+        ModuleListInterface $moduleList
+    )
+    {
+        $this->_moduleList = $moduleList;
+
+        parent::__construct($context);
+    }
 
     /**
      * @return bool
@@ -40,5 +57,15 @@ class Data extends AbstractHelper
     public function getWidgetId()
     {
         return $this->scopeConfig->getValue(self::CFG_JIVOCHAT_WIDGET_ID, ScopeInterface::SCOPE_STORE);
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getExtensionVersion()
+    {
+        $moduleCode = 'Sozo_JivoChat';
+        $moduleInfo = $this->_moduleList->getOne($moduleCode);
+        return $moduleInfo['setup_version'];
     }
 }
