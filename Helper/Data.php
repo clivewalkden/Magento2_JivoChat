@@ -52,7 +52,7 @@ class Data extends AbstractHelper
     /**
      * @return bool
      */
-    public function getEnabled()
+    public function isEnabled()
     {
         return $this->scopeConfig->isSetFlag(self::CFG_JIVOCHAT_ENABLED, ScopeInterface::SCOPE_STORE);
     }
