@@ -11,7 +11,7 @@
  *
  * @category    SOZO Design
  * @package     Sozo_JivoChat
- * @copyright   Copyright (c) 2016 SOZO Design (http://www.sozodesign.com)
+ * @copyright   Copyright (c) 2017 SOZO Design (https://sozodesign.co.uk)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  *
  */
@@ -19,6 +19,7 @@
 namespace Sozo\JivoChat\Block;
 
 use Magento\Framework\View\Element\Template;
+use Magento\Framework\View\Element\Template\Context;
 use Sozo\JivoChat\Helper\Data;
 
 class Display extends Template
@@ -26,11 +27,29 @@ class Display extends Template
     /**
      * @var \Sozo\JivoChat\Helper\Data
      */
-    protected $chatHelper;
+    protected $_chatHelper;
 
-    public function __construct(Data $chatHelper)
+    /**
+     * Display constructor.
+     *
+     * @param \Magento\Framework\View\Element\Template\Context $context
+     * @param \Sozo\JivoChat\Helper\Data                       $chatHelper
+     * @param array                                            $data
+     */
+    public function __construct(Context $context, Data $chatHelper, array $data = [])
     {
-        $this->chatHelper = $chatHelper;
+        $this->_chatHelper = $chatHelper;
+        parent::__construct($context, $data);
+    }
+
+    /**
+     * Get the Widget ID
+     *
+     * @return mixed
+     */
+    public function getWidgetId()
+    {
+        return $this->_chatHelper->getWidgetId();
     }
 
     /**
@@ -40,13 +59,10 @@ class Display extends Template
      */
     public function _toHtml()
     {
-        if ($this->chatHelper->getEnabled()) {
-            $this
-                ->setTemplate('chat/widget.phtml')
-                ->setKey($this->chatHelper->getWidgetId()
-                ->setEnabled($this->chatHelper->getEnabled()));
-            return parent::_toHtml();
+        if (!$this->_chatHelper->getEnabled()) {
+            return '';
         }
-        return '';
+
+        return parent::_toHtml();
     }
 }

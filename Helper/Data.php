@@ -11,7 +11,7 @@
  *
  * @category    SOZO Design
  * @package     Sozo_JivoChat
- * @copyright   Copyright (c) 2016 SOZO Design (http://www.sozodesign.com)
+ * @copyright   Copyright (c) 2017 SOZO Design (https://sozodesign.co.uk)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  *
  */
@@ -25,14 +25,20 @@ use Magento\Store\Model\ScopeInterface;
 
 class Data extends AbstractHelper
 {
-    const CFG_JIVOCHAT_ENABLED          = 'sozo_jivochat/chatconfig/enabled';
-    const CFG_JIVOCHAT_WIDGET_ID        = 'sozo_jivochat/widgetconfig/widget_id';
+    const CFG_JIVOCHAT_ENABLED = 'sozo_jivochat/general/enabled';
+    const CFG_JIVOCHAT_WIDGET_ID = 'sozo_jivochat/general/widget_id';
 
     /**
-     * @var ModuleListInterface
+     * @var \Magento\Framework\Module\ModuleListInterface
      */
     protected $_moduleList;
 
+    /**
+     * Data constructor.
+     *
+     * @param \Magento\Framework\App\Helper\Context         $context
+     * @param \Magento\Framework\Module\ModuleListInterface $moduleList
+     */
     public function __construct(
         Context $context,
         ModuleListInterface $moduleList
