@@ -27,3 +27,10 @@ It allows you to cover a bigger potential audience and increase the business res
 
 ## Start
 Signup [here](https://www.jivochat.com?partner_id=4942&lang=en&pricelist_id=4) to start your 10 day fully featured free trial. After 10 days you will switch to the free edition.
+
+## Installation
+**Using Composer:**
+1. You will need to have an active [JivoChat account](https://www.jivochat.com?partner_id=4942&lang=en&pricelist_id=4) to setup the plugin.
+1. Install using composer `composer require sozodesign/magento2-jivochat`
+1. Log into the admin and enable the plugin and add the widget id
+1. Clear your Magento cache and you're done
