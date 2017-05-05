@@ -59,7 +59,7 @@ class Display extends Template
      */
     public function _toHtml()
     {
-        if (!$this->_chatHelper->getEnabled()) {
+        if (!$this->_chatHelper->isEnabled()) {
             return '';
         }
 

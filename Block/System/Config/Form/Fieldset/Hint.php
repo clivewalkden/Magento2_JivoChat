@@ -85,7 +85,6 @@ class Hint extends Template implements RendererInterface
      */
     public function getPxParams()
     {
-        $modules = $this->_loader->load();
         $v = $this->_helper->getExtensionVersion();
         $extension = "JivoChat;{$v}";
         $mageEdition = $this->_metaData->getEdition();
