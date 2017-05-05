@@ -25,7 +25,7 @@
             <class>separator-top</class>
             <label><![CDATA[JivoChat]]></label>
             <tab>sozodesign</tab>
-            <resource>Sozo_JivoChat::config_jivochat</resource>
+            <resource>Sozo_JivoChat::config</resource>
             <group id="hint" translate="label" type="text" sortOrder="0" showInDefault="1" showInWebsite="1"
                    showInStore="1">
                 <frontend_model>Sozo\JivoChat\Block\System\Config\Form\Fieldset\Hint</frontend_model>
