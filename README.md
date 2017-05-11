@@ -1,6 +1,8 @@
 # JivoChat Magento 2 Plugin
 
-## THIS IS STILL WORK IN PROGRESS AND WILL BE ADDED TO MAGENTO MARKETPLACE WHEN TESTED ##
+[![License](https://poser.pugx.org/sozodesign/magento2-jivochat/license)](./LICENSE)
+[![Total Downloads](https://poser.pugx.org/sozodesign/magento2-jivochat/downloads)](https://packagist.org/packages/sozodesign/magento2-jivochat)
+[![Latest Stable Version](https://poser.pugx.org/sozodesign/magento2-jivochat/v/stable)](https://packagist.org/packages/sozodesign/magento2-jivochat)
 
 Beautiful, modern Live Chat that adapts to fit your site. Connect with more customers – and increase sales!
 Save your customers abandoning their cart while they email or phone you.
