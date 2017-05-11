@@ -13,9 +13,13 @@ This project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [v1.0.1] - 2017-05-11
 
+### Added
+ - Added a [Change Log](./CHANGELOG.md)
+
 ### Changed
 
  - Updated [composer.json](./composer.json) dependencies for the Magento framework
+ - Updated [composer.json](./composer.json) author homepage to correct link
 
 ## [v1.0.0] - 2017-05-05
 
