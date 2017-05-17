@@ -4,12 +4,19 @@ All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
  * [\[Unreleased\]](#unreleased)
+ * [\[v1.0.2\] - 2017-05-17](#v101---2017-05-17)
  * [\[v1.0.1\] - 2017-05-11](#v101---2017-05-11)
- * [\[v1.0.0\] - 2016-05-05](#v100---2017-05-05)
+ * [\[v1.0.0\] - 2017-05-05](#v100---2017-05-05)
 
 ## [Unreleased]
 
 ### Added
+
+## [v1.0.2] - 2017-05-17
+
+### Changed
+
+ - Updated [composer.json](./composer.json) file based on Magento marketplace tools result
 
 ## [v1.0.1] - 2017-05-11
 
