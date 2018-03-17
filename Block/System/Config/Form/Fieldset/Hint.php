@@ -11,7 +11,7 @@
  *
  * @category    SOZO Design
  * @package     Sozo_JivoChat
- * @copyright   Copyright (c) 2017 SOZO Design (https://sozodesign.co.uk)
+ * @copyright   Copyright (c) 2018 SOZO Design (https://sozodesign.co.uk)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  *
  */
@@ -49,11 +49,11 @@ class Hint extends Template implements RendererInterface
     protected $_loader;
 
     /**
-     * @param \Magento\Backend\Block\Template\Context         $context
+     * @param \Magento\Backend\Block\Template\Context $context
      * @param \Magento\Framework\App\ProductMetadataInterface $productMetaData
-     * @param \Magento\Framework\Module\ModuleList\Loader     $loader
-     * @param \Sozo\JivoChat\Helper\Data                      $helper
-     * @param array                                           $data
+     * @param \Magento\Framework\Module\ModuleList\Loader $loader
+     * @param \Sozo\JivoChat\Helper\Data $helper
+     * @param array $data
      */
     public function __construct(
         Context $context,
@@ -61,8 +61,7 @@ class Hint extends Template implements RendererInterface
         Loader $loader,
         Data $helper,
         array $data = []
-    )
-    {
+    ) {
 
         parent::__construct($context, $data);
         $this->_metaData = $productMetaData;

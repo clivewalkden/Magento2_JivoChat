@@ -11,11 +11,12 @@
   ~
   ~ @category    SOZO Design
   ~ @package     Sozo_JivoChat
-  ~ @copyright   Copyright (c) 2017 SOZO Design (https://sozodesign.co.uk)
+  ~ @copyright   Copyright (c) 2018 SOZO Design (https://sozodesign.co.uk)
   ~ @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
   ~
   -->
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
         <tab id="sozodesign" translate="label" sortOrder="999999" class="sozodesign-tab">
             <label>SOZO Extensions</label>
@@ -33,12 +34,14 @@
             <group id="general" translate="label" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
                 <label>General</label>
 
-                <field id="enabled" type="select" translate="label" sortOrder="10" showInDefault="1" showInStore="1" showInWebsite="1">
+                <field id="enabled" type="select" translate="label" sortOrder="10" showInDefault="1" showInStore="1"
+                       showInWebsite="1">
                     <label>Enabled</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                 </field>
 
-                <field id="widget_id" translate="label comment" type="text" sortOrder="30" showInDefault="1" showInStore="1" showInWebsite="1">
+                <field id="widget_id" translate="label comment" type="text" sortOrder="30" showInDefault="1"
+                       showInStore="1" showInWebsite="1">
                     <label>Widget ID</label>
                     <comment>Enter the Widget ID from your script.</comment>
                 </field>

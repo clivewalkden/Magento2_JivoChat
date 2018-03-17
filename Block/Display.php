@@ -11,7 +11,7 @@
  *
  * @category    SOZO Design
  * @package     Sozo_JivoChat
- * @copyright   Copyright (c) 2017 SOZO Design (https://sozodesign.co.uk)
+ * @copyright   Copyright (c) 2018 SOZO Design (https://sozodesign.co.uk)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  *
  */
@@ -33,8 +33,8 @@ class Display extends Template
      * Display constructor.
      *
      * @param \Magento\Framework\View\Element\Template\Context $context
-     * @param \Sozo\JivoChat\Helper\Data                       $chatHelper
-     * @param array                                            $data
+     * @param \Sozo\JivoChat\Helper\Data $chatHelper
+     * @param array $data
      */
     public function __construct(Context $context, Data $chatHelper, array $data = [])
     {
