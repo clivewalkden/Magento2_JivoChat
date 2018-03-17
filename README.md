@@ -3,7 +3,6 @@
 [![License](https://poser.pugx.org/sozodesign/magento2-jivochat/license)](./LICENSE)
 [![Total Downloads](https://poser.pugx.org/sozodesign/magento2-jivochat/downloads)](https://packagist.org/packages/sozodesign/magento2-jivochat)
 [![Latest Stable Version](https://poser.pugx.org/sozodesign/magento2-jivochat/v/stable)](https://packagist.org/packages/sozodesign/magento2-jivochat)
-[![Latest Unstable Version](https://poser.pugx.org/sozodesign/magento2-jivochat/v/unstable)](https://packagist.org/packages/sozodesign/magento2-jivochat)
 
 Beautiful, modern Live Chat that adapts to fit your site. Connect with more customers – and increase sales!
 Save your customers abandoning their cart while they email or phone you.
@@ -32,10 +31,7 @@ It allows you to cover a bigger potential audience and increase the business res
 Signup [here](bit.ly/2gmEB0m) to start your 10 day fully featured free trial. After 10 days you will switch to the free edition.
 
 ## Installation
-**Using Composer:**
-1. You will need to have an active [JivoChat account](bit.ly/2gmEB0m) to setup the plugin.
-1. Install using composer `composer require sozodesign/magento2-jivochat`
-1. Enable the module `php -f bin/magento module:enable --clear-static-content Sozodesign_JivoChat`
-1. Database updates `php -f bin/magento setup:upgrade` 
-1. Configure the module in the Magento 2 Admin. Go to Stores -> Configuration -> SOZO Extensions -> JivoChat
+See the [installation.md](./Guides/INSTALLATION.md) guide
 
+## Usage
+see the [usage.md](./Guides/USAGE.MD) guide
