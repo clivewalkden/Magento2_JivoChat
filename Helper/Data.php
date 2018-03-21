@@ -31,7 +31,7 @@ class Data extends AbstractHelper
     /**
      * @var \Magento\Framework\Module\ModuleListInterface
      */
-    protected $_moduleList;
+    private $moduleList;
 
     /**
      * Data constructor.
@@ -43,7 +43,7 @@ class Data extends AbstractHelper
         Context $context,
         ModuleListInterface $moduleList
     ) {
-        $this->_moduleList = $moduleList;
+        $this->moduleList = $moduleList;
 
         parent::__construct($context);
     }
@@ -70,7 +70,7 @@ class Data extends AbstractHelper
     public function getExtensionVersion()
     {
         $moduleCode = 'Sozo_JivoChat';
-        $moduleInfo = $this->_moduleList->getOne($moduleCode);
+        $moduleInfo = $this->moduleList->getOne($moduleCode);
         return $moduleInfo['setup_version'];
     }
 }

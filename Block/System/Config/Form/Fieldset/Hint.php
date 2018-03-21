@@ -31,7 +31,7 @@ class Hint extends Template implements RendererInterface
     /**
      * @var \Sozo\JivoChat\Helper\Data
      */
-    protected $_helper;
+    private $helper;
 
     /**
      * @var string
@@ -41,12 +41,12 @@ class Hint extends Template implements RendererInterface
     /**
      * @var \Magento\Framework\App\ProductMetadataInterface
      */
-    protected $_metaData;
+    private $metaData;
 
     /**
      * @var \Magento\Framework\Module\ModuleList\Loader
      */
-    protected $_loader;
+    private $loader;
 
     /**
      * @param \Magento\Backend\Block\Template\Context $context
@@ -64,9 +64,9 @@ class Hint extends Template implements RendererInterface
     ) {
 
         parent::__construct($context, $data);
-        $this->_metaData = $productMetaData;
-        $this->_loader = $loader;
-        $this->_helper = $helper;
+        $this->metaData = $productMetaData;
+        $this->loader = $loader;
+        $this->helper = $helper;
     }
 
     /**
@@ -84,9 +84,9 @@ class Hint extends Template implements RendererInterface
      */
     public function getPxParams()
     {
-        $v = $this->_helper->getExtensionVersion();
+        $v = $this->helper->getExtensionVersion();
         $extension = "JivoChat;{$v}";
-        $mageEdition = $this->_metaData->getEdition();
+        $mageEdition = $this->metaData->getEdition();
         switch ($mageEdition) {
             case 'Community':
                 $mageEdition = 'CE';
@@ -95,7 +95,7 @@ class Hint extends Template implements RendererInterface
                 $mageEdition = 'EE';
                 break;
         }
-        $mageVersion = $this->_metaData->getVersion();
+        $mageVersion = $this->metaData->getVersion();
         $mage = "Magento {$mageEdition};{$mageVersion}";
         $hash = md5($extension . '_' . $mage . '_' . $extension);
         return "ext=$extension&mage={$mage}&ctrl={$hash}";
@@ -106,6 +106,6 @@ class Hint extends Template implements RendererInterface
      */
     public function getVersion()
     {
-        return $this->_helper->getExtensionVersion();
+        return $this->helper->getExtensionVersion();
     }
 }

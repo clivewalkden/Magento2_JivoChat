@@ -27,7 +27,7 @@ class Display extends Template
     /**
      * @var \Sozo\JivoChat\Helper\Data
      */
-    protected $_chatHelper;
+    private $chatHelper;
 
     /**
      * Display constructor.
@@ -38,7 +38,7 @@ class Display extends Template
      */
     public function __construct(Context $context, Data $chatHelper, array $data = [])
     {
-        $this->_chatHelper = $chatHelper;
+        $this->chatHelper = $chatHelper;
         parent::__construct($context, $data);
     }
 
@@ -49,7 +49,7 @@ class Display extends Template
      */
     public function getWidgetId()
     {
-        return $this->_chatHelper->getWidgetId();
+        return $this->chatHelper->getWidgetId();
     }
 
     /**
@@ -59,7 +59,7 @@ class Display extends Template
      */
     public function _toHtml()
     {
-        if (!$this->_chatHelper->isEnabled()) {
+        if (!$this->chatHelper->isEnabled()) {
             return '';
         }
 
