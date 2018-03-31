@@ -30,7 +30,7 @@ class Version extends Field
     /**
      * @var \Sozo\JivoChat\Helper\Data $helper
      */
-    protected $_helper;
+    private $helper;
 
     /**
      * @param   \Magento\Backend\Block\Template\Context $context
@@ -40,7 +40,7 @@ class Version extends Field
         Context $context,
         Data $helper
     ) {
-        $this->_helper = $helper;
+        $this->helper = $helper;
         parent::__construct($context);
     }
 
@@ -50,7 +50,7 @@ class Version extends Field
      */
     protected function _getElementHtml(AbstractElement $element)
     {
-        $extensionVersion = $this->_helper->getExtensionVersion();
+        $extensionVersion = $this->helper->getExtensionVersion();
         $extensionTitle = 'SOZO Design - JivoChat';
         $versionLabel = sprintf(
             '<a href="%s" title="%s" target="_blank">%s</a>',
