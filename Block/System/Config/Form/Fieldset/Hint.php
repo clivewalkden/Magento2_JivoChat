@@ -97,7 +97,7 @@ class Hint extends Template implements RendererInterface
         }
         $mageVersion = $this->metaData->getVersion();
         $mage = "Magento {$mageEdition};{$mageVersion}";
-        $hash = md5($extension . '_' . $mage . '_' . $extension);
+        $hash = hash('sha256', $extension . '_' . $mage . '_' . $extension);
         return "ext=$extension&mage={$mage}&ctrl={$hash}";
     }
 
