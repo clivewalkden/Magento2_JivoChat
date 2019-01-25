@@ -11,7 +11,7 @@
  *
  * @category    SOZO Design
  * @package     Sozo_JivoChat
- * @copyright   Copyright (c) 2018 SOZO Design (https://sozodesign.co.uk)
+ * @copyright   Copyright (c) 2019 SOZO Design (https://sozodesign.co.uk)
  * @license     http://opensource.org/licenses/osl-3.0.php  Open Software License (OSL 3.0)
  *
  */
@@ -97,7 +97,7 @@ class Hint extends Template implements RendererInterface
         }
         $mageVersion = $this->metaData->getVersion();
         $mage = "Magento {$mageEdition};{$mageVersion}";
-        $hash = md5($extension . '_' . $mage . '_' . $extension);
+        $hash = hash('sha256', $extension . '_' . $mage . '_' . $extension);
         return "ext=$extension&mage={$mage}&ctrl={$hash}";
     }
 
