@@ -3,6 +3,7 @@
 [![License](https://poser.pugx.org/sozodesign/magento2-jivochat/license)](./LICENSE)
 [![Total Downloads](https://poser.pugx.org/sozodesign/magento2-jivochat/downloads)](https://packagist.org/packages/sozodesign/magento2-jivochat)
 [![Latest Stable Version](https://poser.pugx.org/sozodesign/magento2-jivochat/v/stable)](https://packagist.org/packages/sozodesign/magento2-jivochat)
+[![StyleCI](https://github.styleci.io/repos/125668171/shield?branch=master)](https://github.styleci.io/repos/125668171)
 
 
 ## Overview

@@ -3,6 +3,7 @@
   "description": "A plugin for Magento 2 that outputs the JivoChat javascript code into the website",
   "type": "magento2-module",
   "homepage": "https://github.com/clivewalkden/Magento2_Jivochat",
+  "version": "1.0.4",
   "authors": [
     {
       "name": "Clive Walkden",
