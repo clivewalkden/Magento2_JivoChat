@@ -16,8 +16,8 @@ This project adheres to [Semantic Versioning](http://semver.org/).
  
 ## Fixed
 
-
  - [GH-5](https://github.com/sozo-design/Magento2_JivoChat/issues/5) Fixed issue with block causing varnish to not cache pages
+
 
 ## [v1.0.3] - 2018-03-17
 

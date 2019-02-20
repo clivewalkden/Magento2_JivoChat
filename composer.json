@@ -11,6 +11,7 @@
       "role": "Developer"
     }
   ],
+  "version": "1.0.4",
   "license": "OSL-3.0",
   "require": {
     "magento/framework": ">=100.0.0"
